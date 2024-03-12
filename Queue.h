@@ -1,7 +1,7 @@
 
 #ifndef queue_h
 #define queue_h
-#include "node.h"
+#include "Node.h"
 class Queue {
 	NodePtr headPtr,tailPtr;
 	int size;

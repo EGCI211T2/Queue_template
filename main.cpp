@@ -10,7 +10,7 @@ int main(int argc , char **argv) {
  for(i=1;i<argc;i++){
         if(strcmp(argv[i],"x")==0){
             x=q.dequeue();
-            printf("dequeing %d\n",x);
+            if(x!=-1) cout<<"dequeing "<<x<<endl;
         }
         else {
        q.enqueue(atoi(argv[i]));

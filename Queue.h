@@ -3,7 +3,7 @@
 #define queue_h
 #include "node.h"
 class Queue {
-	NodePtr head,tail;
+	NodePtr headPtr,tailPtr;
 	int size;
 public:
     void enqueue(int);
@@ -33,7 +33,7 @@ int Queue::dequeue(){
      delete t;
      return value;
   }
-  cout<<"The queue is empty ";
+  cout<<"Empty queue";
   return -1;
 }
 

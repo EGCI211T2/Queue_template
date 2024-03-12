@@ -1,4 +1,4 @@
-argument: main.c 
-	gcc main.c -o Q
+argument: main.cpp
+	g++ main.cpp -o Q
 run: Q
 	./Q

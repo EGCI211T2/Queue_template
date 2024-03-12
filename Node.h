@@ -1,42 +1,45 @@
-//
-//  linkedlist.h
-//  LinkedList_simple
-//
-//  Created by Mingmanas Sivaraksa on 5/2/2566 BE.
-//
-#ifndef Node_h
-#define Node_h
-
-struct node
-{
-    int data;
-    struct node *nextPtr;
+#ifndef node_h
+#define node_h
+class NODE{
+     int data;
+    NODE *nextPtr;
+public:
+    NODE(int);
+    ~NODE();
+    void set_next(NODE*);
+    NODE* get_next();
+    int get_value();
 };
-
-typedef struct node Node;
-typedef struct node* NodePtr;
+typedef NODE* NodePtr;
 
 
-void enqueue(NodePtr * head, NodePtr* tail, int x){
-  Node* new_node=(NodePtr) malloc(sizeof(Node));
-if(new_node){ 
-    /* Finish queue*/
- }
+NODE::NODE(int x){
+    data=x;
+    nextPtr=NULL;
+    //pPtr =NULL; not using doubly
+}
+NODE* NODE::get_next(){
+    return nextPtr;
+
+}
+
+int NODE::get_value(){
+    return data;
+
 }
 
 
-int dequeue(NodePtr* head, NodePtr* tail){
-  NodePtr t=*head;
-   if(t){
-   int value= t->data;
-   /* Finish dequeue*/
-       
-       
-   return value;
-   }
-   printf("Empty queue");
-   return 0;
+void NODE::set_next(NODE *t){
+     nextPtr=t;
+
 }
+NODE::~NODE(){
+     cout<<"deleting "<<data<<endl;
+
+}
+
+
+
 
 
 

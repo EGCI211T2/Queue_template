@@ -1,27 +1,51 @@
 
-
-typedef struct {
-	 NodePtr headPtr,tailPtr;
+#ifndef queue_h
+#define queue_h
+#include "node.h"
+class Queue {
+	NodePtr head,tail;
 	int size;
-}Queue;
+public:
+    void enqueue(int);
+    int dequeue();
+    Queue();
+    ~Queue();
+};
 
 
-void enqueue_struct(Queue* q, int x){
-  Node *new_node=(Node*) malloc(sizeof(Node));
+void Queue::enqueue(int x){
+  NodePtr new_node= new NODE(x);
 if(new_node){ 
-  /*Finish enqueue */
+    /* Add head and tail for me please */
+   1. connect & Change tail
+  2. (may be) change head  when the queue is empty
+  3. increase size*/
+	
  }
 }
 
-
-int dequeue_struct(Queue *q){
-   NodePtr t=q->headPtr;
-   if(t){
-   int value= t->data;
-       /*Finish dequeue */
-   return value;
-   }
-   printf("Empty queue");
-   return 0;
+int Queue::dequeue(){
+  if(headPtr!=NULL){
+     NodePtr t=headPtr;
+     int value= t->get_value();
+     /* Add head and tail for me please */
+          
+     delete t;
+     return value;
+  }
+  cout<<"The queue is empty ";
+  return -1;
 }
 
+
+Queue::Queue(){
+    //initialize Queue
+    
+}
+Queue::~Queue(){
+    //delete all remaning Queue (i.e. DQ all) 
+    
+}
+
+
+#endif

@@ -16,7 +16,7 @@ typedef NODE* NodePtr;
 NODE::NODE(int x){
     data=x;
     nextPtr=NULL;
-    //pPtr =NULL; not using doubly
+   
 }
 NODE* NODE::get_next(){
     return nextPtr;
@@ -34,7 +34,7 @@ void NODE::set_next(NODE *t){
 
 }
 NODE::~NODE(){
-     cout<<"deleting "<<data<<endl;
+     cout<<" "<<data<<endl;
 
 }
 

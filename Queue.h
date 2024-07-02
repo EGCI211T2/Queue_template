@@ -19,19 +19,17 @@ if(new_node){
     /* Add head and tail for me please */
    1. connect & Change tail
   2. (may be) change head  when the queue is empty
-  3. increase size*/
+  3. increase size */
 	
  }
 }
 
 int Queue::dequeue(){
-  if(headPtr!=NULL){
-     NodePtr t=headPtr;
-     int value= t->get_value();
+  if(size>0){
+    
      /* Add head and tail for me please */
           
-     delete t;
-     return value;
+    
   }
   cout<<"Empty queue";
   return -1;

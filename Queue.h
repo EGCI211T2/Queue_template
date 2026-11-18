@@ -6,15 +6,14 @@ class Queue {
 	NodePtr headPtr,tailPtr;
 	int size;
 public:
-    void enqueue(int);
-    int dequeue();
+    void enqueue(NodePtr);
+    NodePtr dequeue();
     Queue();
     ~Queue();
 };
 
 
-void Queue::enqueue(int x){
-  NodePtr new_node= new NODE(x);
+void Queue::enqueue(NodePtr new_node){
 if(new_node){ 
     /* Add head and tail for me please */
    1. connect & Change tail
@@ -24,7 +23,7 @@ if(new_node){
  }
 }
 
-int Queue::dequeue(){
+NodePtr Queue::dequeue(){
   if(size>0){
     
      /* Add head and tail for me please */
@@ -32,7 +31,7 @@ int Queue::dequeue(){
     
   }
   cout<<"Empty queue";
-  return -1;
+  return NULL;
 }
 
 

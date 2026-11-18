@@ -5,16 +5,18 @@ using namespace std;
 
 int main(int argc , char **argv) {
   Queue q;
+  NodePtr t;
    int i,x;
    
 
  for(i=1;i<argc;i++){
         if(strcmp(argv[i],"x")==0){
-            x=q.dequeue();
-            if(x!=-1) cout<<"dequeing "<<x<<endl;
+            t=q.dequeue();
+            if(x!=NULL) delete t;
         }
         else {
-       q.enqueue(atoi(argv[i]));
+          t=new NODE(atoi(argv[i]));
+          q.enqueue(t);
            
         }
  }

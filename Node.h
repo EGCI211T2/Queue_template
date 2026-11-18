@@ -2,6 +2,7 @@
 #define node_h
 class NODE{
      int data;
+//int qty // for order
     NODE *nextPtr;
 public:
     NODE(int);
